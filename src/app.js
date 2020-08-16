@@ -38,5 +38,6 @@ app.get('/order*',(req, res )=>{
    
 })
 app.listen(serport, () => {
+    console.log("Hi")
     console.log(`Server is up on port  ` + serport);
 })
