@@ -8,7 +8,7 @@ const publicDirectoryPath = path.join(__dirname, '../public')
 // Setup static directory to serve
 app.use(express.static(publicDirectoryPath))
 
-let serport = process.env.port || 9191;
+let serport = process.env.PORT || 9191;
 
 app.get('/',(req, res )=>{
     console.log('First request');
@@ -40,4 +40,4 @@ app.get('/order*',(req, res )=>{
 app.listen(serport, () => {
     console.log("Hi")
     console.log(`Server is up on port  ` + serport);
-})
+});
